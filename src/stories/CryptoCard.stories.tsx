@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { CryptoCard } from '../cards/CryptoCard';
 
 export default {
-    title: 'Cards',
-    component: CryptoCard
+    title: 'Cards/Cryptocurrency cards',
+    component: 'CryptoCard'
 };
 
 export const FirstCard = () =>
