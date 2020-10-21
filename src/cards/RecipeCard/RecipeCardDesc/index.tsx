@@ -32,4 +32,4 @@ const RecipeCardDesc: React.FC<RecipeDescProps> = ({
     </div>
 </div>
 
-export { RecipeCardDesc };
+export { RecipeCardDesc, RecipeDescProps };

@@ -47,4 +47,4 @@ const IconLine: React.FC<IconProps> = ({
 
 </div>
 
-export { IconLine };
+export { IconLine, IconProps };

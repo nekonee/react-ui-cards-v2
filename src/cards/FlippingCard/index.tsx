@@ -2,12 +2,12 @@ import React from 'react';
 import cx from 'classnames';
 
 import { Card } from '../Card';
-import { FlippingCardBack } from './FlippingCardBack';
-import { FlippingCardFront } from './FlippingCardFront';
+import { FlippingCardBack, FlippingBackProps } from './FlippingCardBack';
+import { FlippingCardFront, FlippingFrontProps } from './FlippingCardFront';
 
 import styles from './styles.module.scss';
 
-type FlippingProps= FlippingCardFront & FlippingCardBack & {
+type FlippingProps= FlippingFrontProps & FlippingBackProps & {
     className: string;
     [key: string] : any;
 }
@@ -21,8 +21,8 @@ const FlippingCard: React.FC<FlippingProps> = ({
     { ...other }
     >
     <div className={ styles['flipping-card'] }>
-    { children} 
+    { children } 
     </div>
 </Card>
 
-export { FlippingCard };
+export { FlippingCard, FlippingProps };

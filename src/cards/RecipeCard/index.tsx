@@ -2,12 +2,12 @@ import React from 'react';
 import cx from 'classnames';
 
 import { Card } from '../Card';
-import { RecipeCardContent } from './RecipeCardContent';
-import { RecipeCardDesc } from './RecipeCardDesc';
+import { RecipeCardContent, RecipeContentProps } from './RecipeCardContent';
+import { RecipeCardDesc, RecipeDescProps } from './RecipeCardDesc';
 
 import styles from './styles.module.scss';
 
-type RecipeProps = RecipeCardContent & RecipeCardDesc & {
+type RecipeProps = RecipeContentProps & RecipeDescProps & {
     className: string;
 }
 

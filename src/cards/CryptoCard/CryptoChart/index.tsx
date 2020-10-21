@@ -5,12 +5,12 @@ import _ from 'lodash';
 import config from './config';
 import styles from './styles.module.scss';
 
-type ChartProps = {
+type CryptoChartProps = {
     chartColor: string;
     chartData: number[]
 }
 
-const CryptoChart: React.FC<ChartProps> = ({
+const CryptoChart: React.FC<CryptoChartProps> = ({
     chartColor,
     chartData
 }) => {
@@ -38,14 +38,14 @@ const CryptoChart: React.FC<ChartProps> = ({
 
 
    return (
-    <div className={styles['crypto-chart']}>
+    <div className={ styles['crypto-chart'] }>
       <Line
-        data={dataFun}
-        options={config.options}
-        height={128}
+        data={ dataFun }
+        options={ config.options }
+        height={ 128 }
       />
     </div>
    )
 };
 
-export { CryptoChart };
+export { CryptoChart, CryptoChartProps };

@@ -2,14 +2,14 @@ import React from 'react';
 
 import styles from './styles.module.scss';
 
-type BackProps = {
+type FlippingBackProps = {
     children: React.ReactNode
 }
 
-const FlippingCardBack: React.FC<BackProps> = ({
+const FlippingCardBack: React.FC<FlippingBackProps> = ({
     children
-}) => <div className={styles['back']}>
+}) => <div className={ styles['back'] }>
       { children }
     </div>
 
-export { FlippingCardBack };
+export { FlippingCardBack, FlippingBackProps };
