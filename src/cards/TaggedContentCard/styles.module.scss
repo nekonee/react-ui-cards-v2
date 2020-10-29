@@ -1,0 +1,22 @@
+a.card-link {
+  display: flex;
+  text-decoration: none;
+}
+
+.tagged-content-card {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+
+  width: 420px;
+  height: 350px;
+
+  background-color: #2c3e50;
+  transition: 0.5s;
+
+  font-family: 'Raleway';
+  
+  &:hover {
+    transform: scale(1.1);
+  }
+}
