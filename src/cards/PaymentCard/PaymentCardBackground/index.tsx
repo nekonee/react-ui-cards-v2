@@ -1,9 +1,11 @@
 import React from 'react';
-import cx from 'classnames';
+import classnames from 'classnames';
 
 import { ReactComponent as WorldMap } from '../svg/world-map.svg';
 import { ReactComponent as Triangles } from '../svg/triangles.svg';
 import { ReactComponent as Spiral } from '../svg/spiral.svg';
+
+
 import styles from './styles.module.scss';
 
 const patterns = {
@@ -20,17 +22,21 @@ export type BackgroundProps = {
 
 const PaymentCardBackground: React.FC<BackgroundProps> = ({
     background,
-    backgroundPattern='WorldMap'
+    backgroundPattern = 'WorldMap'
 }) => {
-    const Component = patterns[backgroundPattern];
+
+    const Empty = () => <span />
+    const Component = backgroundPattern ? patterns[backgroundPattern] : Empty;
     const defaultBg = 'linear-gradient( 135deg, #FF9D6C 10%, #BB4E75 100%)';
 
-    console.log({Component})
+console.log(styles)
 
     return (
-    <div className={styles['payment-card-background']} style={{ background: background || defaultBg }}>
-        <Component />
-    </div>
+        <div className={styles['payment-card-background']} style={{ background: background || defaultBg }}>
+            <Component className={
+                classnames(styles['svg-background'], styles[backgroundPattern])
+            } />
+        </div>
     )
 }
 
