@@ -13,4 +13,4 @@ const UserCardAvatar: React.FC<UserCardAvatarProps> = ({
         style={{ backgroundImage: `url(${src})` }}
     />
 
-export { UserCardAvatarProps, UserCardAvatarProps };
+export { UserCardAvatar, UserCardAvatarProps };
